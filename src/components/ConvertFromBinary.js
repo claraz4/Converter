@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles.css";
-import { base10ToBinary, binaryToBase10, isValid } from "../Helper";
+import { isValid } from "../Helper";
 import { Link } from "react-router-dom";
 
 export default function BinaryToBCD(props) {
@@ -34,24 +34,26 @@ export default function BinaryToBCD(props) {
         <div className="page-container">
            <Link to="/" className="button" id="goback-button">&lt; Go back</Link>
 
-           <form id="form">
-                <label htmlFor="binary-num" className="form-label">Enter a binary number:</label>
-                <input
-                    type="number"
-                    name="binary-num"
-                    autoFocus
-                    autoComplete="off"
-                    className="input-number"
-                    onChange={handleChange}
-                />
-           </form>
+            <div className="converter-container">
+                <form id="form">
+                        <label htmlFor="binary-num" className="form-label">Enter a binary number:</label>
+                        <input
+                            type="number"
+                            name="binary-num"
+                            autoFocus
+                            autoComplete="off"
+                            className="input-number"
+                            onChange={handleChange}
+                        />
+                </form>
 
-           <button className="button centered" onClick={handleConvert}>Convert</button>
+                <button className="button centered" onClick={handleConvert}>Convert</button>
 
-           <div className="result-binary-to-bcd">
-                <h2>{binaryInput} in {props.conversionTo} is:</h2>
-                <div>{ouput}</div>
-                <div>{errorMessage}</div>
+                <div className="result-binary-to-bcd">
+                        <h2>{binaryInput} in {props.conversionTo} is:</h2>
+                        <div>{ouput}</div>
+                        <div>{errorMessage}</div>
+                </div>
            </div>
         </div>
     );

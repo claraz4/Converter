@@ -146,57 +146,60 @@ export default function BaseConverter() {
     return (
         <div className="page-container">
             <Link to="/" className="button" id="goback-button">&lt; Go back</Link>
-            <form id="form">
-                <label htmlFor="number" className="form-label">Enter a number:</label>
-                <input 
-                    type="text"
-                    name="number"
-                    autoFocus
-                    autoComplete="off"
-                    onChange={handleChange}
-                    className="input-number"
-                />
 
-                <label htmlFor="fromBase" className="form-label">From base:</label>
-                <select
-                    placeholder="Base"
-                    name="fromBase"
-                    onChange={handleChange}
-                    value={selectedFrom}
-                    className="input-select"
-                >
-                    <option disabled>--Select a base--</option>
-                    {baseOptions}
-                </select>
+            <div className="converter-container">
+                <form id="form">
+                    <label htmlFor="number" className="form-label">Enter a number:</label>
+                    <input 
+                        type="text"
+                        name="number"
+                        autoFocus
+                        autoComplete="off"
+                        onChange={handleChange}
+                        className="input-number"
+                    />
 
-                <label htmlFor="toBase" className="form-label">To base:</label>
-                <select
-                    placeholder="Base"
-                    name="toBase"
-                    onChange={handleChange}
-                    value={selectedTo}
-                    className="input-select"
-                >
-                    <option disabled>--Select a base--</option>
-                    {baseOptions}
-                </select>
+                    <label htmlFor="fromBase" className="form-label">From base:</label>
+                    <select
+                        placeholder="Base"
+                        name="fromBase"
+                        onChange={handleChange}
+                        value={selectedFrom}
+                        className="input-select"
+                    >
+                        <option disabled>--Select a base--</option>
+                        {baseOptions}
+                    </select>
 
-                <div className="button-container">
-                    <button className="button" onClick={handleConvert}>Convert</button>
-                    <button type="button" onClick={handleSwap} className="button">Swap</button>
+                    <label htmlFor="toBase" className="form-label">To base:</label>
+                    <select
+                        placeholder="Base"
+                        name="toBase"
+                        onChange={handleChange}
+                        value={selectedTo}
+                        className="input-select"
+                    >
+                        <option disabled>--Select a base--</option>
+                        {baseOptions}
+                    </select>
+
+                    <div className="button-container">
+                        <button className="button" onClick={handleConvert}>Convert</button>
+                        <button type="button" onClick={handleSwap} className="button">Swap</button>
+                    </div>
+                </form>
+                
+                <div className="input-number-result">
+                    <h1>{formData.number}</h1>
+                    <p>{selectedFrom}</p>
                 </div>
-            </form>
-            
-            <div className="input-number-result">
-                <h1>{formData.number}</h1>
-                <p>{selectedFrom}</p>
+                <h1 className="equal-sign">=</h1>
+                <div className="input-number-result">
+                    <h1>{result}</h1>
+                    <p>{selectedTo}</p>
+                </div>
+                <h3>{errorMessage}</h3>
             </div>
-            <h1 className="equal-sign">=</h1>
-            <div className="input-number-result">
-                <h1>{result}</h1>
-                <p>{selectedTo}</p>
-            </div>
-            <h3>{errorMessage}</h3>
         </div>
     );
 }

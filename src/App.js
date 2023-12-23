@@ -10,13 +10,13 @@ export default function App() {
   return (
     <div>
       <Router>
-                <Routes>
-                    <Route exact path="/" element={<Home />} />
-                    <Route exact path="/base-converter" element={<BaseConverter />} />    
-                    <Route exact path="/binary-to-bcd" element={<BinaryToBCD />} />    
-                    <Route exact path="/binary-to-excess3" element={<BinaryToExcess3 />} />    
-                </Routes>
-            </Router>
+          <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route exact path="/base-converter" element={<BaseConverter />} />    
+              <Route exact path="/binary-to-bcd" element={<BinaryToBCD />} />    
+              <Route exact path="/binary-to-excess3" element={<BinaryToExcess3 />} />    
+          </Routes>
+      </Router>
     </div>
   );
 }

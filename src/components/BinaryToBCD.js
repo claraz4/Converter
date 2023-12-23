@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles.css";
-import { base10ToBinary, binaryToBase10, isValid } from "../Helper";
+import { base10ToBinary, binaryToBase10 } from "../Helper";
 import ConvertFromBinary from "./ConvertFromBinary";
-import { Link } from "react-router-dom";
 
 export default function BinaryToBCD() {
     function convertToBCD(input) {
