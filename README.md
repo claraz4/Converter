@@ -41,6 +41,7 @@ The idea for this project came during my logic design course. As we delved into 
 - Binary to BCD conversions
 - Binary to Excess-3 conversions
 - Intuitive user interface
+- Responsive design
 
 New features and more conversions might be on their way! Feel free to provide feedback, report any issues, or contribute to its improvement.
  
